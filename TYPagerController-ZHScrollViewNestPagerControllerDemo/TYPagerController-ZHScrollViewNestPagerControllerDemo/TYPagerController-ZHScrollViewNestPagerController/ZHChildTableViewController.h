@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ZHChildTableViewControllerDelegate <NSObject>
+
+- (void)loadMoreData;
+
+@end
+
 @interface ZHChildTableViewController : UITableViewController
+
+@property (nonatomic, assign) id<ZHChildTableViewControllerDelegate> extensionDelegate;
+
+@property (nonatomic, strong) NSMutableArray *dataSource;
+
+- (void)refreshWithData:(NSArray *)data;
+
+- (void)loadMoreData;
 
 @end

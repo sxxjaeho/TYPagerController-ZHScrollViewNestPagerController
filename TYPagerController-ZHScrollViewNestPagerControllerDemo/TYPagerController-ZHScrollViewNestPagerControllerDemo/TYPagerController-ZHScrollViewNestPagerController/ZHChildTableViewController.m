@@ -9,10 +9,13 @@
 #import "ZHChildTableViewController.h"
 
 @interface ZHChildTableViewController ()<UIScrollViewDelegate>
-@property (nonatomic, assign) BOOL canScroll;
+
 @end
 
-@implementation ZHChildTableViewController
+@implementation ZHChildTableViewController {
+    
+    BOOL _canScroll;
+}
 
 - (void)dealloc {
     
@@ -22,10 +25,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dataSource = [NSMutableArray array];
+    
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    
+    // 上拉加载控件
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:kAccessRoofNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:kAwayRoofNotification object:nil];
+}
+
+- (void)loadMoreData {
+    
+    if ([[self extensionDelegate] respondsToSelector:@selector(loadMoreData)]) {
+        [[self extensionDelegate] loadMoreData];
+    }
+}
+
+- (void)refreshWithData:(NSArray *)data {
+    
+    self.dataSource = [NSMutableArray array];
+    for (NSString *text in data) {
+        [[self dataSource] addObject:text];
+    }    
+    [[self tableView] reloadData];
 }
 
 #pragma mark - notification
@@ -37,12 +64,12 @@
         NSDictionary *userInfo = notification.userInfo;
         NSString *canScroll = userInfo[@"canScroll"];
         if ([canScroll isEqualToString:@"1"]) {
-            self.canScroll = YES;
+            _canScroll = YES;
             self.tableView.showsVerticalScrollIndicator = YES;
         }
     }else if([notificationName isEqualToString:kAwayRoofNotification]){
         self.tableView.contentOffset = CGPointZero;
-        self.canScroll = NO;
+        _canScroll = NO;
         self.tableView.showsVerticalScrollIndicator = NO;
     }
 }
@@ -50,7 +77,7 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if (!self.canScroll) {
+    if (!_canScroll) {
         [scrollView setContentOffset:CGPointZero];
     }
     CGFloat offsetY = scrollView.contentOffset.y;
@@ -63,7 +90,7 @@
 #pragma mark - table view datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return [[self dataSource] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,7 +98,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([UITableViewCell class])];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"报数:%ld",indexPath.row];
+    cell.textLabel.text = self.dataSource[[indexPath row]];
     return cell;
 }
 

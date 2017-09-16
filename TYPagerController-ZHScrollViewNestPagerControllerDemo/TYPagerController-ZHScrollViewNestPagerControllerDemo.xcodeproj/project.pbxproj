@@ -7,29 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDF9BEC144486ADCAD9B72F1 /* libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 567EE66A63805C04A2554060 /* libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a */; };
 		FA0B2D6A1F6B6AF0004E26C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2D691F6B6AF0004E26C4 /* main.m */; };
 		FA0B2D6D1F6B6AF0004E26C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2D6C1F6B6AF0004E26C4 /* AppDelegate.m */; };
 		FA0B2D701F6B6AF0004E26C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2D6F1F6B6AF0004E26C4 /* ViewController.m */; };
 		FA0B2D731F6B6AF0004E26C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B2D711F6B6AF0004E26C4 /* Main.storyboard */; };
 		FA0B2D751F6B6AF0004E26C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0B2D741F6B6AF0004E26C4 /* Assets.xcassets */; };
-		FA0B2DD51F6B6B31004E26C4 /* TYTabPagerBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DA81F6B6B31004E26C4 /* TYTabPagerBar.m */; };
-		FA0B2DD61F6B6B31004E26C4 /* TYTabPagerBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DAA1F6B6B31004E26C4 /* TYTabPagerBarCell.m */; };
-		FA0B2DD71F6B6B31004E26C4 /* TYTabPagerBarLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DAC1F6B6B31004E26C4 /* TYTabPagerBarLayout.m */; };
-		FA0B2DD81F6B6B31004E26C4 /* TYTabPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DAE1F6B6B31004E26C4 /* TYTabPagerController.m */; };
-		FA0B2DD91F6B6B31004E26C4 /* TYTabPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DB01F6B6B31004E26C4 /* TYTabPagerView.m */; };
-		FA0B2DDA1F6B6B31004E26C4 /* TYPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DB21F6B6B31004E26C4 /* TYPagerController.m */; };
-		FA0B2DDB1F6B6B31004E26C4 /* TYPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DB41F6B6B31004E26C4 /* TYPagerView.m */; };
-		FA0B2DDC1F6B6B31004E26C4 /* TYPagerViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DB61F6B6B31004E26C4 /* TYPagerViewLayout.m */; };
-		FA0B2DDD1F6B6B31004E26C4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DB91F6B6B31004E26C4 /* MASCompositeConstraint.m */; };
-		FA0B2DDE1F6B6B31004E26C4 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DBC1F6B6B31004E26C4 /* MASConstraint.m */; };
-		FA0B2DDF1F6B6B31004E26C4 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DBE1F6B6B31004E26C4 /* MASConstraintMaker.m */; };
-		FA0B2DE01F6B6B31004E26C4 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DC01F6B6B31004E26C4 /* MASLayoutConstraint.m */; };
-		FA0B2DE11F6B6B31004E26C4 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DC41F6B6B31004E26C4 /* MASViewAttribute.m */; };
-		FA0B2DE21F6B6B31004E26C4 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DC61F6B6B31004E26C4 /* MASViewConstraint.m */; };
-		FA0B2DE31F6B6B31004E26C4 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DC81F6B6B31004E26C4 /* NSArray+MASAdditions.m */; };
-		FA0B2DE41F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DCB1F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		FA0B2DE51F6B6B31004E26C4 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DCD1F6B6B31004E26C4 /* View+MASAdditions.m */; };
-		FA0B2DE61F6B6B31004E26C4 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2DD01F6B6B31004E26C4 /* ViewController+MASAdditions.m */; };
 		FA0B2DE91F6B6B72004E26C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B2DE81F6B6B72004E26C4 /* Launch Screen.storyboard */; };
 		FAC3A3301F6B6C8D003457B0 /* ZHChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC3A3291F6B6C8D003457B0 /* ZHChildTableViewController.m */; };
 		FAC3A3311F6B6C8D003457B0 /* ZHMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC3A32B1F6B6C8D003457B0 /* ZHMainScrollView.m */; };
@@ -55,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		567EE66A63805C04A2554060 /* libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE373C5F1DE9831ADA2ED6ED /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D589F43B32060E9602B5941C /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FA0B2D651F6B6AF0004E26C4 /* TYPagerController-ZHScrollViewNestPagerControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TYPagerController-ZHScrollViewNestPagerControllerDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B2D691F6B6AF0004E26C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA0B2D6B1F6B6AF0004E26C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,47 +52,6 @@
 		FA0B2D791F6B6AF0004E26C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0B2D7E1F6B6AF0004E26C4 /* TYPagerController-ZHScrollViewNestPagerControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TYPagerController-ZHScrollViewNestPagerControllerDemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B2D891F6B6AF0004E26C4 /* TYPagerController-ZHScrollViewNestPagerControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TYPagerController-ZHScrollViewNestPagerControllerDemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0B2DA71F6B6B31004E26C4 /* TYTabPagerBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBar.h; sourceTree = "<group>"; };
-		FA0B2DA81F6B6B31004E26C4 /* TYTabPagerBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBar.m; sourceTree = "<group>"; };
-		FA0B2DA91F6B6B31004E26C4 /* TYTabPagerBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBarCell.h; sourceTree = "<group>"; };
-		FA0B2DAA1F6B6B31004E26C4 /* TYTabPagerBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBarCell.m; sourceTree = "<group>"; };
-		FA0B2DAB1F6B6B31004E26C4 /* TYTabPagerBarLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerBarLayout.h; sourceTree = "<group>"; };
-		FA0B2DAC1F6B6B31004E26C4 /* TYTabPagerBarLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerBarLayout.m; sourceTree = "<group>"; };
-		FA0B2DAD1F6B6B31004E26C4 /* TYTabPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerController.h; sourceTree = "<group>"; };
-		FA0B2DAE1F6B6B31004E26C4 /* TYTabPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerController.m; sourceTree = "<group>"; };
-		FA0B2DAF1F6B6B31004E26C4 /* TYTabPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTabPagerView.h; sourceTree = "<group>"; };
-		FA0B2DB01F6B6B31004E26C4 /* TYTabPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTabPagerView.m; sourceTree = "<group>"; };
-		FA0B2DB11F6B6B31004E26C4 /* TYPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerController.h; sourceTree = "<group>"; };
-		FA0B2DB21F6B6B31004E26C4 /* TYPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerController.m; sourceTree = "<group>"; };
-		FA0B2DB31F6B6B31004E26C4 /* TYPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerView.h; sourceTree = "<group>"; };
-		FA0B2DB41F6B6B31004E26C4 /* TYPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerView.m; sourceTree = "<group>"; };
-		FA0B2DB51F6B6B31004E26C4 /* TYPagerViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPagerViewLayout.h; sourceTree = "<group>"; };
-		FA0B2DB61F6B6B31004E26C4 /* TYPagerViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPagerViewLayout.m; sourceTree = "<group>"; };
-		FA0B2DB81F6B6B31004E26C4 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
-		FA0B2DB91F6B6B31004E26C4 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
-		FA0B2DBA1F6B6B31004E26C4 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
-		FA0B2DBB1F6B6B31004E26C4 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
-		FA0B2DBC1F6B6B31004E26C4 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
-		FA0B2DBD1F6B6B31004E26C4 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
-		FA0B2DBE1F6B6B31004E26C4 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
-		FA0B2DBF1F6B6B31004E26C4 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
-		FA0B2DC01F6B6B31004E26C4 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
-		FA0B2DC11F6B6B31004E26C4 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
-		FA0B2DC21F6B6B31004E26C4 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
-		FA0B2DC31F6B6B31004E26C4 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
-		FA0B2DC41F6B6B31004E26C4 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		FA0B2DC51F6B6B31004E26C4 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
-		FA0B2DC61F6B6B31004E26C4 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
-		FA0B2DC71F6B6B31004E26C4 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DC81F6B6B31004E26C4 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		FA0B2DC91F6B6B31004E26C4 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DCA1F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DCB1F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		FA0B2DCC1F6B6B31004E26C4 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DCD1F6B6B31004E26C4 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
-		FA0B2DCE1F6B6B31004E26C4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DCF1F6B6B31004E26C4 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		FA0B2DD01F6B6B31004E26C4 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		FA0B2DE71F6B6B40004E26C4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FA0B2DE81F6B6B72004E26C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FAC3A3281F6B6C8D003457B0 /* ZHChildTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHChildTableViewController.h; sourceTree = "<group>"; };
@@ -124,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF9BEC144486ADCAD9B72F1 /* libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,11 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C3FDFEA1128E2F10CEDD18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE373C5F1DE9831ADA2ED6ED /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.debug.xcconfig */,
+				D589F43B32060E9602B5941C /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		88D1A28919876D5EF712BA22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567EE66A63805C04A2554060 /* libPods-TYPagerController-ZHScrollViewNestPagerControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA0B2D5C1F6B6AF0004E26C4 = {
 			isa = PBXGroup;
 			children = (
 				FA0B2D671F6B6AF0004E26C4 /* TYPagerController-ZHScrollViewNestPagerControllerDemo */,
 				FA0B2D661F6B6AF0004E26C4 /* Products */,
+				39C3FDFEA1128E2F10CEDD18 /* Pods */,
+				88D1A28919876D5EF712BA22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,8 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				FAC3A3271F6B6C8D003457B0 /* TYPagerController-ZHScrollViewNestPagerController */,
-				FA0B2DA51F6B6B31004E26C4 /* TYPagerController */,
-				FA0B2DB71F6B6B31004E26C4 /* Masonry */,
 				FA0B2D6B1F6B6AF0004E26C4 /* AppDelegate.h */,
 				FA0B2D6C1F6B6AF0004E26C4 /* AppDelegate.m */,
 				FA0B2D6E1F6B6AF0004E26C4 /* ViewController.h */,
@@ -188,69 +151,6 @@
 				FA0B2DE71F6B6B40004E26C4 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FA0B2DA51F6B6B31004E26C4 /* TYPagerController */ = {
-			isa = PBXGroup;
-			children = (
-				FA0B2DA61F6B6B31004E26C4 /* TabPager */,
-				FA0B2DB11F6B6B31004E26C4 /* TYPagerController.h */,
-				FA0B2DB21F6B6B31004E26C4 /* TYPagerController.m */,
-				FA0B2DB31F6B6B31004E26C4 /* TYPagerView.h */,
-				FA0B2DB41F6B6B31004E26C4 /* TYPagerView.m */,
-				FA0B2DB51F6B6B31004E26C4 /* TYPagerViewLayout.h */,
-				FA0B2DB61F6B6B31004E26C4 /* TYPagerViewLayout.m */,
-			);
-			path = TYPagerController;
-			sourceTree = "<group>";
-		};
-		FA0B2DA61F6B6B31004E26C4 /* TabPager */ = {
-			isa = PBXGroup;
-			children = (
-				FA0B2DA71F6B6B31004E26C4 /* TYTabPagerBar.h */,
-				FA0B2DA81F6B6B31004E26C4 /* TYTabPagerBar.m */,
-				FA0B2DA91F6B6B31004E26C4 /* TYTabPagerBarCell.h */,
-				FA0B2DAA1F6B6B31004E26C4 /* TYTabPagerBarCell.m */,
-				FA0B2DAB1F6B6B31004E26C4 /* TYTabPagerBarLayout.h */,
-				FA0B2DAC1F6B6B31004E26C4 /* TYTabPagerBarLayout.m */,
-				FA0B2DAD1F6B6B31004E26C4 /* TYTabPagerController.h */,
-				FA0B2DAE1F6B6B31004E26C4 /* TYTabPagerController.m */,
-				FA0B2DAF1F6B6B31004E26C4 /* TYTabPagerView.h */,
-				FA0B2DB01F6B6B31004E26C4 /* TYTabPagerView.m */,
-			);
-			path = TabPager;
-			sourceTree = "<group>";
-		};
-		FA0B2DB71F6B6B31004E26C4 /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				FA0B2DB81F6B6B31004E26C4 /* MASCompositeConstraint.h */,
-				FA0B2DB91F6B6B31004E26C4 /* MASCompositeConstraint.m */,
-				FA0B2DBA1F6B6B31004E26C4 /* MASConstraint+Private.h */,
-				FA0B2DBB1F6B6B31004E26C4 /* MASConstraint.h */,
-				FA0B2DBC1F6B6B31004E26C4 /* MASConstraint.m */,
-				FA0B2DBD1F6B6B31004E26C4 /* MASConstraintMaker.h */,
-				FA0B2DBE1F6B6B31004E26C4 /* MASConstraintMaker.m */,
-				FA0B2DBF1F6B6B31004E26C4 /* MASLayoutConstraint.h */,
-				FA0B2DC01F6B6B31004E26C4 /* MASLayoutConstraint.m */,
-				FA0B2DC11F6B6B31004E26C4 /* Masonry.h */,
-				FA0B2DC21F6B6B31004E26C4 /* MASUtilities.h */,
-				FA0B2DC31F6B6B31004E26C4 /* MASViewAttribute.h */,
-				FA0B2DC41F6B6B31004E26C4 /* MASViewAttribute.m */,
-				FA0B2DC51F6B6B31004E26C4 /* MASViewConstraint.h */,
-				FA0B2DC61F6B6B31004E26C4 /* MASViewConstraint.m */,
-				FA0B2DC71F6B6B31004E26C4 /* NSArray+MASAdditions.h */,
-				FA0B2DC81F6B6B31004E26C4 /* NSArray+MASAdditions.m */,
-				FA0B2DC91F6B6B31004E26C4 /* NSArray+MASShorthandAdditions.h */,
-				FA0B2DCA1F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				FA0B2DCB1F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				FA0B2DCC1F6B6B31004E26C4 /* View+MASAdditions.h */,
-				FA0B2DCD1F6B6B31004E26C4 /* View+MASAdditions.m */,
-				FA0B2DCE1F6B6B31004E26C4 /* View+MASShorthandAdditions.h */,
-				FA0B2DCF1F6B6B31004E26C4 /* ViewController+MASAdditions.h */,
-				FA0B2DD01F6B6B31004E26C4 /* ViewController+MASAdditions.m */,
-			);
-			path = Masonry;
 			sourceTree = "<group>";
 		};
 		FAC3A3271F6B6C8D003457B0 /* TYPagerController-ZHScrollViewNestPagerController */ = {
@@ -275,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0B2D921F6B6AF0004E26C4 /* Build configuration list for PBXNativeTarget "TYPagerController-ZHScrollViewNestPagerControllerDemo" */;
 			buildPhases = (
+				BF8EED7897A4A937E2A6DDA9 /* [CP] Check Pods Manifest.lock */,
 				FA0B2D611F6B6AF0004E26C4 /* Sources */,
 				FA0B2D621F6B6AF0004E26C4 /* Frameworks */,
 				FA0B2D631F6B6AF0004E26C4 /* Resources */,
+				079FA7A555E46EACC83D2CB2 /* [CP] Embed Pods Frameworks */,
+				61EC0B737F1E8EB6197FE274 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,35 +302,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		079FA7A555E46EACC83D2CB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61EC0B737F1E8EB6197FE274 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8EED7897A4A937E2A6DDA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA0B2D611F6B6AF0004E26C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0B2DDB1F6B6B31004E26C4 /* TYPagerView.m in Sources */,
-				FA0B2DD51F6B6B31004E26C4 /* TYTabPagerBar.m in Sources */,
-				FA0B2DD81F6B6B31004E26C4 /* TYTabPagerController.m in Sources */,
-				FA0B2DE11F6B6B31004E26C4 /* MASViewAttribute.m in Sources */,
 				FAC3A3301F6B6C8D003457B0 /* ZHChildTableViewController.m in Sources */,
-				FA0B2DE01F6B6B31004E26C4 /* MASLayoutConstraint.m in Sources */,
 				FAC3A3321F6B6C8D003457B0 /* ZHMainScrollViewViewController.m in Sources */,
-				FA0B2DE41F6B6B31004E26C4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				FA0B2DDF1F6B6B31004E26C4 /* MASConstraintMaker.m in Sources */,
-				FA0B2DD61F6B6B31004E26C4 /* TYTabPagerBarCell.m in Sources */,
 				FAC3A3311F6B6C8D003457B0 /* ZHMainScrollView.m in Sources */,
-				FA0B2DD91F6B6B31004E26C4 /* TYTabPagerView.m in Sources */,
-				FA0B2DE61F6B6B31004E26C4 /* ViewController+MASAdditions.m in Sources */,
-				FA0B2DDC1F6B6B31004E26C4 /* TYPagerViewLayout.m in Sources */,
-				FA0B2DDA1F6B6B31004E26C4 /* TYPagerController.m in Sources */,
-				FA0B2DD71F6B6B31004E26C4 /* TYTabPagerBarLayout.m in Sources */,
 				FAC3A3331F6B6C8D003457B0 /* ZHMainTabPagerControllerViewController.m in Sources */,
-				FA0B2DDD1F6B6B31004E26C4 /* MASCompositeConstraint.m in Sources */,
-				FA0B2DE31F6B6B31004E26C4 /* NSArray+MASAdditions.m in Sources */,
 				FA0B2D701F6B6AF0004E26C4 /* ViewController.m in Sources */,
 				FA0B2D6D1F6B6AF0004E26C4 /* AppDelegate.m in Sources */,
-				FA0B2DE51F6B6B31004E26C4 /* View+MASAdditions.m in Sources */,
-				FA0B2DE21F6B6B31004E26C4 /* MASViewConstraint.m in Sources */,
-				FA0B2DDE1F6B6B31004E26C4 /* MASConstraint.m in Sources */,
 				FA0B2D6A1F6B6AF0004E26C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +504,7 @@
 		};
 		FA0B2D931F6B6AF0004E26C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE373C5F1DE9831ADA2ED6ED /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;
@@ -578,6 +518,7 @@
 		};
 		FA0B2D941F6B6AF0004E26C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D589F43B32060E9602B5941C /* Pods-TYPagerController-ZHScrollViewNestPagerControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2ENWLKZ8AQ;

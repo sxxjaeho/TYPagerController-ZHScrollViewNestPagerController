@@ -7,11 +7,13 @@
 //
 
 #import "ZHMainTabPagerControllerViewController.h"
-#import "ZHChildTableViewController.h"
 
-@interface ZHMainTabPagerControllerViewController ()<TYTabPagerControllerDataSource,TYTabPagerControllerDelegate>
+@interface ZHMainTabPagerControllerViewController ()<TYTabPagerControllerDataSource,TYTabPagerControllerDelegate, ZHChildTableViewControllerDelegate>
 
-@property (nonatomic, strong) NSArray *datas;
+@property (nonatomic, strong) ZHChildTableViewController *firstChildTableViewController;
+@property (nonatomic, strong) ZHChildTableViewController *secondChildTableViewController;
+
+@property (nonatomic, strong) NSArray *tabDataSource;
 
 @end
 
@@ -21,48 +23,77 @@
     [super viewDidLoad];
 
     self.tabBar.layout.barStyle = TYPagerBarStyleProgressView;
-    self.tabBar.layout.cellWidth = kScreenWidth / 3 - 10;
+    self.tabBar.layout.cellWidth = kScreenWidth / 2.1f;
     
     self.dataSource = self;
     self.delegate = self;
     
-    [self loadData];
+    [self _handleTabPagerBarData];
 }
 
-- (void)loadData {
-    NSMutableArray *datas = [NSMutableArray array];
-    for (NSInteger i = 0; i < 3; ++i) {
-        [datas addObject:[NSString stringWithFormat:@"控制器 %ld", i+1]];
-    }
-    _datas = [datas copy];
+- (void)_handleTabPagerBarData {
     
+    NSMutableArray *tabDataSource = [NSMutableArray array];
+    for (NSInteger i = 0; i < 2; ++i) {
+        [tabDataSource addObject:[NSString stringWithFormat:@"控制器 %ld", i+1]];
+    }
+    
+    self.tabDataSource = [tabDataSource copy];
+
     [self reloadData];
+}
+
+#pragma mark - accessor
+- (void)setDataSourceDictionary:(NSMutableDictionary *)dataSourceDictionary {
+    if (_dataSourceDictionary != dataSourceDictionary) {
+        _dataSourceDictionary = dataSourceDictionary;
+    }
+    self.firstChildTableViewController.dataSource = dataSourceDictionary[@(0)];
+    self.secondChildTableViewController.dataSource = dataSourceDictionary[@(1)];
+    [[[self firstChildTableViewController] tableView] reloadData];
+    [[[self secondChildTableViewController] tableView] reloadData];
+}
+
+- (ZHChildTableViewController *)firstChildTableViewController {
+    if (nil == _firstChildTableViewController) {
+        _firstChildTableViewController = [[ZHChildTableViewController alloc] init];
+    }
+    return _firstChildTableViewController;
+}
+
+- (ZHChildTableViewController *)secondChildTableViewController {
+    if (nil == _secondChildTableViewController) {
+        _secondChildTableViewController = [[ZHChildTableViewController alloc] init];
+    }
+    return _secondChildTableViewController;
+}
+
+#pragma mark - ZHChildTableViewControllerDelegate
+- (void)loadMoreData {
+    
+    self.loadMoreDataHandler(self.tabBar.curIndex);
 }
 
 #pragma mark - TYTabPagerControllerDataSource
 
 - (NSInteger)numberOfControllersInTabPagerController {
-    return _datas.count;
+    return [[self tabDataSource] count];
 }
 
 - (UIViewController *)tabPagerController:(TYTabPagerController *)tabPagerController controllerForIndex:(NSInteger)index prefetching:(BOOL)prefetching {
     if (index == 0) {
-        ZHChildTableViewController *firstViewController = [[ZHChildTableViewController alloc]init];
-        firstViewController.view.backgroundColor = [UIColor redColor];
+        ZHChildTableViewController *firstViewController = self.firstChildTableViewController;
+        firstViewController.extensionDelegate = self;
         return firstViewController;
-    }else if (index == 1) {
-        ZHChildTableViewController *secondViewController = [[ZHChildTableViewController alloc]init];
-        secondViewController.view.backgroundColor = [UIColor yellowColor];
-        return secondViewController;
     }else {
-        ZHChildTableViewController *thirdViewController = [[ZHChildTableViewController alloc]init];
-        thirdViewController.view.backgroundColor = [UIColor greenColor];
-        return thirdViewController;
+        ZHChildTableViewController *secondViewController = self.secondChildTableViewController;
+        secondViewController.extensionDelegate = self;
+        return secondViewController;
     }
 }
 
 - (NSString *)tabPagerController:(TYTabPagerController *)tabPagerController titleForIndex:(NSInteger)index {
-    NSString *title = _datas[index];
+    NSString *title = self.tabDataSource[index];
     return title;
 }
 

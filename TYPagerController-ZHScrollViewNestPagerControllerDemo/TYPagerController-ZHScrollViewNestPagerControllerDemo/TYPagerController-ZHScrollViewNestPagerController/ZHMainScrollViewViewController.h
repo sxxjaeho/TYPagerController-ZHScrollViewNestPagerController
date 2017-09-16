@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZHMainTabPagerControllerViewController.h"
+#import "ZHMainScrollView.h"
 
 @interface ZHMainScrollViewViewController : UIViewController
+
+@property (nonatomic, strong, readonly) ZHMainTabPagerControllerViewController *pageController;
+@property (nonatomic, strong, readonly) ZHMainScrollView *containerScrollView;
+@property (nonatomic, strong, readonly) UIImageView *headerView;
+@property (nonatomic, strong, readonly) UIView *contentView;
 
 @end

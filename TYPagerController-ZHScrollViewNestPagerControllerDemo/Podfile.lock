@@ -1,0 +1,18 @@
+PODS:
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - TYPagerController (2.0.2)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0.2)
+  - MJRefresh (~> 3.1.12)
+  - TYPagerController
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  TYPagerController: c04d27f46007aefe5055dbe6710fcf7e74da0dc3
+
+PODFILE CHECKSUM: 49c6f07d9d8f6f2d21c03249d4ce4c241e1f80e6
+
+COCOAPODS: 1.3.0.rc.1

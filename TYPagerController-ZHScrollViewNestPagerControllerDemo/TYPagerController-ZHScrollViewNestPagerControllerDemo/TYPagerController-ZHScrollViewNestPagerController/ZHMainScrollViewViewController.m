@@ -7,9 +7,6 @@
 //
 
 #import "ZHMainScrollViewViewController.h"
-#import "ZHMainTabPagerControllerViewController.h"
-#import "ZHMainScrollView.h"
-#import "ZHChildTableViewController.h"
 
 @interface ZHMainScrollViewViewController ()<UIScrollViewDelegate>
 
@@ -17,6 +14,8 @@
 @property (nonatomic, strong) ZHMainScrollView *containerScrollView;
 @property (nonatomic, strong) UIImageView *headerView;
 @property (nonatomic, strong) UIView *contentView;
+
+@property (nonatomic, strong) NSMutableDictionary *dataSourceDictionary;
 
 @end
 
@@ -40,14 +39,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 默认可滚动
     _canScroll = YES;
     
     [self _createSubviews];
     
+    // 下拉刷新控件
+    self.containerScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self _fetchAllRemoteData:NO needRequest:YES];
+    }];
+    [[[self containerScrollView] mj_header] beginRefreshing];
+    
+    self.dataSourceDictionary = [@{} mutableCopy];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notification:) name:kAwayRoofNotification object:nil];
 }
 
-#pragma mark - accessor
+#pragma mark - private
+
 
 - (void)_createSubviews {
     
@@ -76,6 +85,115 @@
     
     [[self contentView] addSubview:[[self pageController] view]];
     self.pageController.pagerController.contentInset = UIEdgeInsetsMake(0, 0, kScreenHeight, kScreenWidth);
+    __weak __typeof(self) weakSelf = self;
+    self.pageController.loadMoreDataHandler = ^(NSInteger index) {
+        switch (index) {
+            case 0:
+                [weakSelf _fetchFirstViewControllerData:YES needRequest:YES];
+                break;
+            case 1:
+                [weakSelf _fetchSecondViewControllerData:YES needRequest:YES];
+                break;
+            default:
+                break;
+        }
+    };
+}
+
+// 请求数据
+- (void)_fetchAllRemoteData:(BOOL)append needRequest:(BOOL)needRequest {
+    
+    [self _fetchFirstViewControllerData:append needRequest:needRequest];
+    [self _fetchSecondViewControllerData:append needRequest:needRequest];
+}
+
+- (void)_fetchFirstViewControllerData:(BOOL)append needRequest:(BOOL)needRequest {
+    if (!needRequest) {
+        return;
+    }
+    NSMutableArray *dataArray = [NSMutableArray array];
+    for (NSInteger i = 0; i < 20; i++) {
+        [dataArray addObject:[NSString stringWithFormat:@"第一视图控制器的报数:%ld", i]];
+    }
+    [self _handleFirstViewControllerData:dataArray append:append hasMore:YES];
+    
+    [self _finishReloadData];
+}
+
+- (void)_fetchSecondViewControllerData:(BOOL)append needRequest:(BOOL)needRequest {
+    if (!needRequest) {
+        return;
+    }
+    NSMutableArray *dataArray = [NSMutableArray array];
+    for (NSInteger i = 0; i < 10; i++) {
+        [dataArray addObject:[NSString stringWithFormat:@"第二视图控制器的报数:%ld", i]];
+    }
+    [self _handleSecondViewControllerData:dataArray append:append hasMore:YES];
+    
+    [self _finishReloadData];
+}
+
+// 处理数据
+- (void)_handleFirstViewControllerData:(NSArray *)data append:(BOOL)append hasMore:(BOOL)hasMore {
+    NSMutableArray *dataSourceArray = [NSMutableArray array];
+    if (append) {
+        dataSourceArray = [NSMutableArray arrayWithArray:self.dataSourceDictionary[@(0)]];
+        for (NSString *text in data) {
+            [dataSourceArray addObject:text];
+        }
+    } else {
+        for (NSString *text in data) {
+            [dataSourceArray addObject:text];
+        }
+    }
+    
+    if (hasMore) {
+        self.pageController.firstChildTableViewController.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:[[self pageController] firstChildTableViewController] refreshingAction:@selector(loadMoreData)];
+    } else {
+        [[[[[self pageController] firstChildTableViewController] tableView] mj_footer] endRefreshingWithNoMoreData];
+    }
+    
+    [[self dataSourceDictionary] setObject:dataSourceArray forKey:@(0)];
+    
+    if (append) {
+        ((void (*)(void *, SEL, NSArray *))objc_msgSend)((__bridge void *)(self.pageController.firstChildTableViewController),@selector(refreshWithData:), self.dataSourceDictionary[@(0)]);
+    } else {
+        self.pageController.dataSourceDictionary = self.dataSourceDictionary;
+    }
+}
+
+- (void)_handleSecondViewControllerData:(NSArray *)data append:(BOOL)append hasMore:(BOOL)hasMore {
+    NSMutableArray *dataSourceArray = [NSMutableArray array];
+    if (append) {
+        dataSourceArray = [NSMutableArray arrayWithArray:self.dataSourceDictionary[@(1)]];
+        for (NSString *text in data) {
+            [dataSourceArray addObject:text];
+        }
+    } else {
+        for (NSString *text in data) {
+            [dataSourceArray addObject:text];
+        }
+    }
+    
+    if (hasMore) {
+        self.pageController.secondChildTableViewController.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:[[self pageController] firstChildTableViewController] refreshingAction:@selector(loadMoreData)];
+    } else {
+        [[[[[self pageController] secondChildTableViewController] tableView] mj_footer] endRefreshingWithNoMoreData];
+    }
+    
+    [[self dataSourceDictionary] setObject:dataSourceArray forKey:@(1)];
+    
+    if (append) {
+        ((void (*)(void *, SEL, NSArray *))objc_msgSend)((__bridge void *)(self.pageController.secondChildTableViewController),@selector(refreshWithData:), self.dataSourceDictionary[@(1)]);
+    } else {
+        self.pageController.dataSourceDictionary = self.dataSourceDictionary;
+    }
+}
+
+- (void)_finishReloadData {
+    
+    [[[self containerScrollView] mj_header] endRefreshing];
+    [[[self containerScrollView] mj_footer] endRefreshing];
 }
 
 #pragma mark - accessor
