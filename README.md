@@ -3,7 +3,7 @@
 
 ![59ba4f00f1279.gif](https://i.loli.net/2017/09/14/59ba4f00f1279.gif)
 ## Features
-基于 TYPagerController 的 TYTabPagerController 实现此功能,点击标签控制器切换到不同的试图控制器,可以左右滑动
+基于 TYPagerController 的 TYTabPagerController 实现此功能,点击标签控制器切换到不同的视图控制器,可以左右滑动
 >嵌入不同试图控制器
 
 ```
